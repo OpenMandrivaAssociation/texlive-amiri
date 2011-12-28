@@ -26,16 +26,8 @@ and Arabic Supplement blocks of Unicode 6.0, which means it
 essentially covers any language written in Arabic script and
 supported by Unicode.
 
-%pre
-    %{_sbindir}/texlive.post
-
 %post
     %{_sbindir}/texlive.post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-    fi
 
 %postun
     if [ $1 -eq 0 ]; then
@@ -74,7 +66,6 @@ supported by Unicode.
 %doc %{_texmfdistdir}/doc/fonts/amiri/test-suite/lellah.test
 %doc %{_texmfdistdir}/doc/fonts/amiri/tools/build.py
 %doc %{_texmfdistdir}/doc/fonts/amiri/tools/runtest.py
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -85,5 +76,3 @@ supported by Unicode.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
