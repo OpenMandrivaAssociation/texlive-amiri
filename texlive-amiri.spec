@@ -1,12 +1,13 @@
-# revision 24783
+# revision 24961
 # category Package
 # catalog-ctan /fonts/amiri
-# catalog-date 2011-12-06 08:35:17 +0100
+# catalog-date 2011-12-28 00:52:35 +0100
 # catalog-license ofl
-# catalog-version 1.0
+# catalog-version 0.101
 Name:		texlive-amiri
-Version:	1.0
-Release:	2
+Epoch:		1
+Version:	0.101
+Release:	1
 Summary:	A classical Arabic typeface, Naskh style
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/amiri
@@ -36,6 +37,8 @@ supported by Unicode.
 
 #-----------------------------------------------------------------------
 %files
+%{_texmfdistdir}/fonts/truetype/public/amiri/amiri-bold.ttf
+%{_texmfdistdir}/fonts/truetype/public/amiri/amiri-boldslanted.ttf
 %{_texmfdistdir}/fonts/truetype/public/amiri/amiri-regular.ttf
 %{_texmfdistdir}/fonts/truetype/public/amiri/amiri-slanted.ttf
 %doc %{_texmfdistdir}/doc/fonts/amiri/Makefile
@@ -47,6 +50,8 @@ supported by Unicode.
 %doc %{_texmfdistdir}/doc/fonts/amiri/documentation/README-Arabic.txt
 %doc %{_texmfdistdir}/doc/fonts/amiri/documentation/README.txt
 %doc %{_texmfdistdir}/doc/fonts/amiri/documentation/amiri-table.pdf
+%doc %{_texmfdistdir}/doc/fonts/amiri/sources/amiri-bold.fea
+%doc %{_texmfdistdir}/doc/fonts/amiri/sources/amiri-bold.sfd
 %doc %{_texmfdistdir}/doc/fonts/amiri/sources/amiri-regular.fea
 %doc %{_texmfdistdir}/doc/fonts/amiri/sources/amiri-regular.sfd
 %doc %{_texmfdistdir}/doc/fonts/amiri/sources/basic.fea
@@ -63,6 +68,7 @@ supported by Unicode.
 %doc %{_texmfdistdir}/doc/fonts/amiri/sources/stylisticsets.fea
 %doc %{_texmfdistdir}/doc/fonts/amiri/test-suite/basic.test
 %doc %{_texmfdistdir}/doc/fonts/amiri/test-suite/extendedmeem.test
+%doc %{_texmfdistdir}/doc/fonts/amiri/test-suite/high_baa.test
 %doc %{_texmfdistdir}/doc/fonts/amiri/test-suite/lellah.test
 %doc %{_texmfdistdir}/doc/fonts/amiri/tools/build.py
 %doc %{_texmfdistdir}/doc/fonts/amiri/tools/runtest.py
