@@ -7,7 +7,7 @@
 Name:		texlive-amiri
 Epoch:		1
 Version:	0.105
-Release:	2
+Release:	3
 Summary:	A classical Arabic typeface, Naskh style
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/amiri
