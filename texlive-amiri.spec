@@ -1,13 +1,13 @@
-# revision 30816
+# revision 32506
 # category Package
 # catalog-ctan /fonts/amiri
-# catalog-date 2012-12-31 19:16:18 +0100
+# catalog-date 2013-12-30 07:20:52 +0100
 # catalog-license ofl
-# catalog-version 0.105
+# catalog-version 0.107
 Name:		texlive-amiri
 Epoch:		1
-Version:	0.105
-Release:	5
+Version:	0.107
+Release:	1
 Summary:	A classical Arabic typeface, Naskh style
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/amiri
@@ -52,6 +52,7 @@ supported by Unicode.
 %doc %{_texmfdistdir}/doc/fonts/amiri/documentation/README.txt
 %doc %{_texmfdistdir}/doc/fonts/amiri/documentation/amiri-table.pdf
 %doc %{_texmfdistdir}/doc/fonts/amiri/documentation/documentation-arabic.pdf
+%doc %{_texmfdistdir}/doc/fonts/amiri/documentation/documentation-sources/documentation-arabic.tex
 %doc %{_texmfdistdir}/doc/fonts/amiri/sources/amiri-bold.sfd
 %doc %{_texmfdistdir}/doc/fonts/amiri/sources/amiri-regular.sfd
 %doc %{_texmfdistdir}/doc/fonts/amiri/sources/amiri.fea
