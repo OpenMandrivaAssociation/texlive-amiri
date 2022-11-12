@@ -1,13 +1,13 @@
 Name:		texlive-amiri
 Epoch:		1
-Version:	0.110
-Release:	2
+Version:	55403
+Release:	1
 Summary:	A classical Arabic typeface, Naskh style
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/amiri
 License:	OFL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/amiri.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/amiri.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/amiri.r55403.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/amiri.doc.r55403.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -22,12 +22,12 @@ essentially covers any language written in Arabic script and
 supported by Unicode.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -36,7 +36,7 @@ supported by Unicode.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
