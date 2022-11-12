@@ -6,8 +6,8 @@ Summary:	A classical Arabic typeface, Naskh style
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/amiri
 License:	OFL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/amiri.r55403.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/amiri.doc.r55403.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/amiri.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/amiri.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
