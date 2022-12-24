@@ -1,6 +1,6 @@
 Name:		texlive-amiri
 Epoch:		1
-Version:	55403
+Version:	65191
 Release:	1
 Summary:	A classical Arabic typeface, Naskh style
 Group:		Publishing
