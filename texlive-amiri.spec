@@ -1,45 +1,28 @@
-Name:		texlive-amiri
+%global tl_name amiri
+%global tl_revision 79618
+
+Name:		texlive-%{tl_name}
 Epoch:		1
-Version:	65191
-Release:	2
+Version:	1.000
+Release:	%{tl_revision}.1
 Summary:	A classical Arabic typeface, Naskh style
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/fonts/amiri
-License:	OFL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/amiri.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/amiri.doc.r%{version}.tar.xz
+License:	ofl
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/amiri.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/amiri.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
+BuildSystem:	texlive
 BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+%texlive_base_requires
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-This is a beta-release of the font, though it is believed to be
-largely usable. (The author retains the right to make
-incompatible changes in the future.) The font covers the Arabic
-and Arabic Supplement blocks of Unicode 6.0, which means it
-essentially covers any language written in Arabic script and
-supported by Unicode.
+Amiri is a classical Arabic typeface in Naskh style for typesetting
+books and other running text. It is a revival of the beautiful typeface
+pioneered in the early 20th century by Bulaq Press in Cairo, also known
+as Amiria Press, after which the font is named. The project aims at the
+revival of the aesthetics and traditions of Arabic typesetting, and
+adapting it to the era of digital typesetting, in a publicly available
+form.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/fonts/truetype/public/amiri
-%doc %{_texmfdistdir}/doc/fonts/amiri
-
-#-----------------------------------------------------------------------
-%prep
-%autosetup -p1 -c -a1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar fonts doc %{buildroot}%{_texmfdistdir}
